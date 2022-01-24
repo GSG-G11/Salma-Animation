@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.animation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+/* animation: name duration timing-function delay iteration-count direction fill-mode; */
+
+.animation-image {
+  width: 200px;
+  height: 200px;
+
+  animation: imagemove 1s linear 1s, imageradius 1s linear 2s forwards;
+}
+
+@keyframes imagemove {
+  0% {
+    opacity: 0;
+    transform: translate(100%, 100%);
+  }
+  50% {
+    transform: translatex(-200px) scale(2);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes imageradius {
+  0% {
+    border-radius: 0%;
+  }
+  100% {
+    transform: scale(1.5);
+    border-radius: 50%;
+  }
+}
